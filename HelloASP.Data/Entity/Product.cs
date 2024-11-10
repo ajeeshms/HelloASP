@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HelloASP.Data.Entity {
+
+    [Serializable]
     public class Product {
         public int Id { get; set; }
         public string Name { get; set; }

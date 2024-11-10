@@ -16,7 +16,7 @@ namespace HelloASP.Data.Repository {
                 using (var command = connection.CreateCommand()) {
 
                     command.CommandText = "select productid, name, productnumber, listprice from SalesLT.Product order by productid offset @skip rows fetch next @fetch rows only";
-                    command.Parameters.AddWithValue("@skip", page - 1 * size);
+                    command.Parameters.AddWithValue("@skip", (page - 1) * size);
                     command.Parameters.AddWithValue("@fetch", size);
 
                     connection.Open();

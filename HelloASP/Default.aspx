@@ -8,8 +8,9 @@
             <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
             <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
         </section>
+        <uc1:UserControl1 ID="productsTable" runat="server" />
 
-        <div class="row">
+        <%--<div class="row">
             <section class="col-md-4" aria-labelledby="gettingStartedTitle">
                 <h2 id="gettingStartedTitle">Getting started</h2>
                 <p>
@@ -39,7 +40,7 @@
                 </p>
             </section>
             
-        </div>
+        </div>--%>
     </main>
     
 </asp:Content>
