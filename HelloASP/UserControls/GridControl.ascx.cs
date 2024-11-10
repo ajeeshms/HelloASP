@@ -11,8 +11,9 @@ using System.Web.UI.WebControls;
 namespace HelloASP.UserControls {
     public partial class GridControl : System.Web.UI.UserControl {
         protected void Page_Load(object sender, EventArgs e) {
-            var repo = new ProductRepository();
+            
             try {
+                var repo = new ProductRepository();
                 ViewState["Products"] = repo.Get(1, 10).ToList();
                 BindGrid();
             }
@@ -31,7 +32,20 @@ namespace HelloASP.UserControls {
             }
         }
 
+        protected void theGrid_RowUpdating(object sender, GridViewUpdateEventArgs e) {
+            var id = Convert.ToInt32(((HiddenField)theGrid.Rows[e.RowIndex].FindControl("hdnId")).Value);
+            var name = ((TextBox)theGrid.Rows[e.RowIndex].FindControl("txtName")).Text;
+            var price = Convert.ToDecimal(((TextBox)theGrid.Rows[e.RowIndex].FindControl("txtlistPrice")).Text);
+            
+            var products = ViewState["Products"] as List<Product>;
+            var index = products.FindIndex(p=> p.Id == id);
+            products.ElementAt(index).ListPrice = price;
+            
+            ViewState["Products"] = products;
+        }
+
         protected void theGrid_RowCancellingEdit(object sender, GridViewCancelEditEventArgs e) {
+            theGrid.EditIndex = -1;
             BindGrid();
         }
 
@@ -39,5 +53,6 @@ namespace HelloASP.UserControls {
             theGrid.DataSource = ViewState["Products"];
             theGrid.DataBind();
         }
+
     }
 }

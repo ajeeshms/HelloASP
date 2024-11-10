@@ -25,7 +25,7 @@ namespace HelloASP.Data.Repository {
 
                         while (reader.Read()) {
 
-                            yield return new Product { 
+                            yield return new Product {
                                 Id = Convert.ToInt32(reader["productid"]),
                                 Name = reader["name"].ToString(),
                                 ProductNumber = reader["listprice"].ToString(),
@@ -36,5 +36,27 @@ namespace HelloASP.Data.Repository {
                 }
             }
         }
+
+        //public bool Update(Product product) {
+        //    using (var connection = new SqlConnection(Settings.ConnectionString)) {
+
+        //        using (var command = connection.CreateCommand()) {
+
+        //            command.CommandText = "update SalesLT.Product set name = @name, @listprice = @listPrice where productid = @prodId";
+        //            command.Parameters.AddWithValue("@prodId", product.Id);
+        //            command.Parameters.AddWithValue("@name", product.Name);
+        //            command.Parameters.AddWithValue("@listPrice", product.ListPrice);
+
+        //            connection.Open();
+
+        //            try {
+        //                return command.ExecuteNonQuery() == 1;
+        //            }
+        //            catch {
+        //                return false;
+        //            }
+        //        }
+        //    }
     }
 }
+
