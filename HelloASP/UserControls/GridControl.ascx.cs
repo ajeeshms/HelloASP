@@ -42,6 +42,8 @@ namespace HelloASP.UserControls {
             products.ElementAt(index).ListPrice = price;
             
             ViewState["Products"] = products;
+            theGrid.EditIndex = -1;
+            BindGrid();
         }
 
         protected void theGrid_RowCancellingEdit(object sender, GridViewCancelEditEventArgs e) {
