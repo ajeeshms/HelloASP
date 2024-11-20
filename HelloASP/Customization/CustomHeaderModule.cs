@@ -14,8 +14,11 @@ namespace HelloASP.Customization {
         }
 
         private void Context_EndRequest(object sender, EventArgs e) {
-            HttpContext context = ((HttpApplication)sender).Context;
-            context.Response.Headers.Add("X-Server-Time", DateTime.Now.ToString("o"));
+            try {
+                HttpContext context = ((HttpApplication)sender).Context;
+                context.Response.Headers.Add("X-Server-Time", DateTime.Now.ToString("o"));
+            }
+            catch (Exception ex) { }
         }
     }
 }

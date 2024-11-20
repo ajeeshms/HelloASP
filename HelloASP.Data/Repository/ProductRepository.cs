@@ -37,26 +37,27 @@ namespace HelloASP.Data.Repository {
             }
         }
 
-        //public bool Update(Product product) {
-        //    using (var connection = new SqlConnection(Settings.ConnectionString)) {
+        public bool Update(Product product) {
+            using (var connection = new SqlConnection(Settings.ConnectionString)) {
 
-        //        using (var command = connection.CreateCommand()) {
+                using (var command = connection.CreateCommand()) {
 
-        //            command.CommandText = "update SalesLT.Product set name = @name, @listprice = @listPrice where productid = @prodId";
-        //            command.Parameters.AddWithValue("@prodId", product.Id);
-        //            command.Parameters.AddWithValue("@name", product.Name);
-        //            command.Parameters.AddWithValue("@listPrice", product.ListPrice);
+                    command.CommandText = "update SalesLT.Product set name = @name, @listprice = @listPrice where productid = @prodId";
+                    command.Parameters.AddWithValue("@prodId", product.Id);
+                    command.Parameters.AddWithValue("@name", product.Name);
+                    command.Parameters.AddWithValue("@listPrice", product.ListPrice);
 
-        //            connection.Open();
+                    connection.Open();
 
-        //            try {
-        //                return command.ExecuteNonQuery() == 1;
-        //            }
-        //            catch {
-        //                return false;
-        //            }
-        //        }
-        //    }
+                    try {
+                        return command.ExecuteNonQuery() == 1;
+                    }
+                    catch {
+                        return false;
+                    }
+                }
+            }
+        }
     }
 }
 

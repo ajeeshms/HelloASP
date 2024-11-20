@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Product.cs" />
+    <Compile Include="Entity\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ProductModelRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Settings.cs" />
   </ItemGroup>

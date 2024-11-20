@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HelloASP.UserControls {
+namespace HelloASP {
 
 
-    public partial class GridControl {
+    public partial class ProductModels {
 
         /// <summary>
-        /// theGrid control.
+        /// productModelsTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView theGrid;
-
-        /// <summary>
-        /// productModelGrid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView productModelGrid;
+        protected global::HelloASP.UserControls.GridControl productModelsTable;
     }
 }
