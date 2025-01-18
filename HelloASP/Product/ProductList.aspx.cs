@@ -47,7 +47,7 @@ namespace HelloASP
 
             string productID = row.Cells[0].Text;
 
-            Response.Redirect("~/ProductDetails.aspx?ProductId=" + productID);
+            Response.Redirect("~/Product/ProductDetails.aspx?ProductId=" + productID);
         }
     }
 }
