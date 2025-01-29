@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HelloASP {
+namespace HelloASP.Customers {
 
 
-    public partial class SiteMaster {
+    public partial class Default {
 
         /// <summary>
-        /// MainContent control.
+        /// customerSqlDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.SqlDataSource customerSqlDataSource;
 
         /// <summary>
-        /// lblSession control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSession;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

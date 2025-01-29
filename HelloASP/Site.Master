@@ -48,6 +48,7 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Product/ProductList">Products</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Product/ProductModels">Product Models</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Customers">Customers</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,6 +58,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
+                <p><asp:Label ID="lblSession" runat="server" Text=""></asp:Label></p>
                 <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
             </footer>
         </div>

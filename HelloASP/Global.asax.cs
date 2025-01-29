@@ -15,5 +15,13 @@ namespace HelloASP {
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Data.Settings.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         }
+        protected void Session_Start(object sender, EventArgs e) {
+            if (HttpContext.Current.Session["UserVisitCount"] == null) {
+                HttpContext.Current.Session["UserVisitCount"] = 1;
+            }
+            else {
+                HttpContext.Current.Session["UserVisitCount"] = (int)HttpContext.Current.Session["UserVisitCount"] + 1;
+            }
+        }
     }
 }

@@ -54,7 +54,9 @@ namespace HelloASP {
         }
 
         protected void Page_Load(object sender, EventArgs e) {
-
+            if (Session["UserVisitCount"] != null) {
+                lblSession.Text = "You have visited this site " + Session["UserVisitCount"].ToString() + " times.";
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e) {
