@@ -1,15 +1,16 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HelloASP.Data")]
+[assembly: AssemblyTitle("HelloASP.Integrations")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP")]
-[assembly: AssemblyProduct("HelloASP.Data")]
-[assembly: AssemblyCopyright("Copyright © HP 2024")]
+[assembly: AssemblyProduct("HelloASP.Integrations")]
+[assembly: AssemblyCopyright("Copyright © HP 2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a8f60c70-67f2-4899-9e1e-569c6b1c073d")]
+[assembly: Guid("48adf96d-a714-43d0-a0bf-3ab115cf898c")]
 
 // Version information for an assembly consists of the following four values:
 //

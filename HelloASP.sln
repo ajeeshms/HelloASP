@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloASP", "HelloASP\HelloA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloASP.Data", "HelloASP.Data\HelloASP.Data.csproj", "{A8F60C70-67F2-4899-9E1E-569C6B1C073D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloASP.Integrations", "HelloASP.Integrations\HelloASP.Integrations.csproj", "{48ADF96D-A714-43D0-A0BF-3AB115CF898C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A8F60C70-67F2-4899-9E1E-569C6B1C073D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8F60C70-67F2-4899-9E1E-569C6B1C073D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8F60C70-67F2-4899-9E1E-569C6B1C073D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48ADF96D-A714-43D0-A0BF-3AB115CF898C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48ADF96D-A714-43D0-A0BF-3AB115CF898C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48ADF96D-A714-43D0-A0BF-3AB115CF898C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48ADF96D-A714-43D0-A0BF-3AB115CF898C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

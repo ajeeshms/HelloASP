@@ -1,28 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 
-namespace HelloASP
-{
-    public partial class ProductList : System.Web.UI.Page
-    {
+namespace HelloASP {
+    public partial class ProductList : System.Web.UI.Page {
         string ConStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
+        protected void Page_Load(object sender, EventArgs e) {
+            if (!IsPostBack) {
                 BindRepeater();
             }
         }
 
-        private void BindRepeater()
-        {
+        private void BindRepeater() {
             SqlConnection con = new SqlConnection(ConStr);
             SqlDataAdapter da = new SqlDataAdapter("Select top 10 ProductID, Name as ProductName, ProductNumber From [SalesLT].[Product]", ConStr);
             DataSet ds = new DataSet();
@@ -31,8 +22,7 @@ namespace HelloASP
             gridViewProductList.DataBind();
         }
 
-        protected void btnViewDetails_Click(object sender, EventArgs e)
-        {
+        protected void btnViewDetails_Click(object sender, EventArgs e) {
             int selectedIndex = gridViewProductList.SelectedIndex;
             GridViewRow gridViewRow = gridViewProductList.SelectedRow;
 
@@ -40,8 +30,7 @@ namespace HelloASP
 
         }
 
-        protected void gridViewProductList_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
+        protected void gridViewProductList_RowCommand(object sender, GridViewCommandEventArgs e) {
             int rowIndex = Convert.ToInt32(e.CommandArgument);
             GridViewRow row = gridViewProductList.Rows[rowIndex];
 

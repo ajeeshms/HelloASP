@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 
 namespace HelloASP.Customization {
     public class CustomHeaderModule : IHttpModule {
         public void Dispose() {
-            
+
         }
 
         public void Init(HttpApplication context) {

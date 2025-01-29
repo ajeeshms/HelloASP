@@ -22,6 +22,7 @@
         <asp:TemplateField ItemStyle-Width="200px" HeaderText="List Price">
             <ItemTemplate>
                 <asp:Label ID="lbllistPrice" runat="server" Text='<%#Eval("ListPrice")%>'></asp:Label>
+                (<asp:Label ID="lblListPriceWords" runat="server" Text='<%#Eval("ListPriceInWords")%>'></asp:Label>)
             </ItemTemplate>
             <EditItemTemplate>
                 <asp:TextBox ID="txtlistPrice" runat="server" Text='<%#Bind("ListPrice")%>'></asp:TextBox>

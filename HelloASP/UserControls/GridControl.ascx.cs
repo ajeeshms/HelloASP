@@ -1,11 +1,8 @@
 ﻿using HelloASP.Data.Entity;
 using HelloASP.Data.Repository;
+using HelloASP.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Services.Description;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace HelloASP.UserControls {
@@ -13,13 +10,13 @@ namespace HelloASP.UserControls {
 
         public string GridType { get; set; }
         protected void Page_Load(object sender, EventArgs e) {
-            
+
             try {
                 BindGrid();
                 ViewState["Message"] = string.Empty;
             }
             catch (Exception ex) {
-                
+
             }
         }
 
@@ -61,7 +58,7 @@ namespace HelloASP.UserControls {
             if (this.GridType == "PRODUCTS") {
                 var repo = new ProductRepository();
                 var data = repo.Get(1, 10).ToList();
-                theGrid.DataSource = data;
+                theGrid.DataSource = data.Select(x=> new ProductDataModel(x));
                 ViewState["GridTitle"] = "Products";
                 theGrid.DataBind();
             }
@@ -72,7 +69,7 @@ namespace HelloASP.UserControls {
                 ViewState["GridTitle"] = "Product Models";
                 productModelGrid.DataBind();
             }
-            
+
         }
 
     }

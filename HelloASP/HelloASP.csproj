@@ -257,6 +257,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Services\ProductService.asmx" />
     <Content Include="Site.Master" />
     <Content Include="UserControls\GridControl.ascx" />
     <Content Include="UserControls\ProductView_Details.ascx" />
@@ -275,6 +276,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Customization\CustomHeaderModule.cs" />
+    <Compile Include="Models\ProductDataModel.cs" />
     <Compile Include="Product\ProductModels.aspx.cs">
       <DependentUpon>ProductModels.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -308,6 +310,10 @@
       <DependentUpon>ProductList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ProductService.asmx.cs">
+      <DependentUpon>ProductService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -364,6 +370,10 @@
     <ProjectReference Include="..\HelloASP.Data\HelloASP.Data.csproj">
       <Project>{a8f60c70-67f2-4899-9e1e-569c6b1c073d}</Project>
       <Name>HelloASP.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelloASP.Integrations\HelloASP.Integrations.csproj">
+      <Project>{48ADF96D-A714-43D0-A0BF-3AB115CF898C}</Project>
+      <Name>HelloASP.Integrations</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
